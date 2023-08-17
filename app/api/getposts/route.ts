@@ -6,7 +6,6 @@ import { get_threads } from "@/libs/actions/thread.actions";
 export async function GET(req:NextRequest){
   try{
     const user:any=await currentUser();
-    console.log("Printing user in getthreads api",user)
     if(!user){
       return redirect("/sign-in")
     }
