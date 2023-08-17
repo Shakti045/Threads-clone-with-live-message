@@ -159,7 +159,7 @@ export async function getallmessageofaconversation(conversationid:string){
 
 export async  function createmessage({conversationid,text,media,createdby}:createmessageprops){
   try{
-       console.log("create message called",createdby)
+   
        await connectdb();
        let createprops:any={
         createdby:createdby,

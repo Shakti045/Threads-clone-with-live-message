@@ -5,6 +5,7 @@ import User from "../model/User";
 import connectdb from "@/utils/database/dbconnect";
 import Comment from "../model/Comment";
 import Subcomment from "../model/Subcomment";
+import { redirect } from "next/navigation";
 export  async function createthread({
     clerkid,
     content,
@@ -52,6 +53,9 @@ export async function get_threads(clerkid:string,skip?:any){
         const skipamount=parseInt(skip?skip:0);
         await connectdb();
         const myuser= await User.findOne({clerkid:clerkid},{name:1,profilepic:1,username:1,_id:1});
+        if(!myuser){
+           return redirect('/onboarding')
+        }
         await connectdb();
         const threads=await Thread.find({}).populate({
             path:"user",

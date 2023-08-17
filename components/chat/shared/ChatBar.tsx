@@ -11,7 +11,7 @@ const ChatBar = async() => {
  
   const currentUser=data?.currentuser;
   return (
-    <div className=' text-white p-2'>
+    <div className='  text-white p-2'>
         <div className=' flex justify-between items-center'>
              <h1 className=" font-bold text-[20px]">
                 Messages

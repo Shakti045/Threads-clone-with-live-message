@@ -34,7 +34,7 @@ const ChatHeader = ({members,currentuser,isgroupchat,groupdata}:{members:any[],c
         <button onClick={()=>setshowprofile(!showprofile)}><SlOptionsVertical/></button>
        </div>
     </div>
-     <div className={` overflow-hidden  flex flex-col  items-center gap-4 absolute z-50  duration-700  transition-all  bottom-[5rem] top-[5rem] right-0   bg-slate-900 ${showprofile?"w-[30vw] p-4 ":"w-[0px] p-0"}`}>
+     <div className={` overflow-hidden  flex flex-col  items-center gap-4 absolute z-50  duration-700  transition-all  bottom-[5rem] top-[5rem] right-0   bg-slate-900 ${showprofile?" max-sm:w-[100vw] w-[30vw] p-4 ":"w-[0px] p-0"}`}>
      <div className='  relative h-[100px] w-[100px]'>
             <Avatar clerkid={!isgroupchat?otheruser?.clerkid:""} showactive={true} url={isgroupchat?groupdata.groupicon:otheruser?.profilepic}/>
        </div>

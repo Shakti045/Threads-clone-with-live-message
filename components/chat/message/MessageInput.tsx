@@ -69,7 +69,7 @@ const handlemediamessage=async({url,resource_type}:{url:string,resource_type:str
 
 
 async function createmessage(data:any){
-       const loading=toast.loading('Sending message...')
+    //    const loading=toast.loading('Sending message...')
         try{
          const result=await fetch('/api/message/createmessage',{
                 method:'POST',
@@ -84,7 +84,7 @@ async function createmessage(data:any){
                })
                const responce=await result.json();
                if(responce.Success){
-                     toast.success('Message sent successfully');
+                    //  toast.success('Message sent successfully');
                      reset();
                 }else{
                     toast.error(responce.Message);
@@ -93,7 +93,7 @@ async function createmessage(data:any){
           console.log(err);
           toast.error('Failed to send message');
         }finally{
-            toast.dismiss(loading);
+            // toast.dismiss(loading);
         }    
  }
 

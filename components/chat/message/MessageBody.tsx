@@ -38,7 +38,7 @@ const MessageBody = (
    }
   },[conversationid])
   return (
-    <div className=' messagebody flex flex-col p-5  gap-5 custom-scrollbar overflow-y-scroll h-[calc(100%-10rem)] w-full'>
+    <div className='  messagebody flex flex-col p-5  gap-5 custom-scrollbar overflow-y-scroll h-[calc(100%-10rem)] w-full'>
       {
         messages.map((message)=>{
           const groupuser=members.length>2?othergroupusers.find((user:any)=>user._id===message.createdby):""

@@ -11,10 +11,10 @@ import { setThreads } from "@/redux/slices/threadslice";
 export default   function Home() {
    const {threads}:{threads:any}= useSelector((state:RootState)=>state.thread);
    const [loading,setLoading] = useState<boolean>(true);
-  const [hasmore,sethasmore]=useState(false);
-  const [skipamount,setskipamount]=useState(0);
-  const {user}=useSelector((state:RootState)=>state.user);
-    const dispatch = useDispatch<AppDispatch>();
+   const [hasmore,sethasmore]=useState(false);
+   const [skipamount,setskipamount]=useState(0);
+   const {user}=useSelector((state:RootState)=>state.user);
+   const dispatch = useDispatch<AppDispatch>();
    async function getdata(){
     setLoading(true);
     try{

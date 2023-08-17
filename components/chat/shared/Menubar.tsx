@@ -27,8 +27,8 @@ import React from 'react'
 const Menubar = ({profilepic,clerkid}:{profilepic:string,clerkid:string}) => {
     const pathname:any=usePathname();
   return (
-    <section className="  flex flex-col justify-between p-2 h-full  border-r-[1px] border-dark-4 ">
-      <div className=" flex flex-col gap-3 text-white">
+    <section className=" max-sm:p-0  max-sm:flex-row  flex flex-col justify-between p-2 h-full  border-r-[1px] border-dark-4 ">
+      <div className=" max-sm:flex-row max-sm:w-full max-sm:justify-between flex flex-col gap-3 text-white">
       {
         tabs.map((tab,index)=>(
             <Link href={tab.path} key={index}>
@@ -39,7 +39,7 @@ const Menubar = ({profilepic,clerkid}:{profilepic:string,clerkid:string}) => {
         ))
       }
       </div>
-      <div className=' relative h-[50px] w-[50px]'>
+      <div className=' max-sm:hidden relative h-[50px] w-[50px]'>
             <Avatar showactive clerkid={clerkid} url={profilepic}/>
       </div>
     </section>

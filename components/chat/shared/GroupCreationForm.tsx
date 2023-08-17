@@ -48,7 +48,7 @@ const GroupCreationForm = ({users}:{users:any[]}) => {
 
     },[]);
   return (
-    <div className='  bg-dark-2 p-4 rounded-md  w-full h-full text-white  flex flex-col gap-4'>
+    <div className='  max-sm:h-[50vh]  bg-dark-2 p-4 rounded-md  w-full h-full text-white  flex flex-col gap-4'>
       <div className=' flex  gap-4 items-center'>
          {
             imgurl?(<Image alt='groupicon' src={imgurl} height={80} width={80} className=' rounded-full'/>):(<div className=' p-4 rounded-full bg-dark-4 text-white text-[20px]  w-fit'>

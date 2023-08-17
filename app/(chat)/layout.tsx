@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang='en'>
     <body className={`${inter.className} h-[100vh] w-[100vw] flex`}>
      <main className=" w-full flex">
-      <section className="  w-[5%] bg-dark-2">
+      <section className=" max-sm:hidden  w-[5%] bg-dark-2">
       {/* @ts-ignore expected an error */}
       <LeftSidebar />
       </section>

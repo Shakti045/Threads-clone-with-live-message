@@ -6,11 +6,13 @@ import { redirect } from 'next/navigation'
 import UserCard from '@/components/Cards/UserCard'
 const RightBar = async () => {
   const user=await currentUser();
+  // console.log("Printing user from right sidebar",user);
 if(!user){
   redirect('/sign-in')
 }
 
 const userfromclerkid:any=await fetchuserfromclerkid(user.id);
+// console.log("Printing clerkiduser from right sidebar ",userfromclerkid);
 if(!userfromclerkid){
   redirect('/onboarding')
 }
