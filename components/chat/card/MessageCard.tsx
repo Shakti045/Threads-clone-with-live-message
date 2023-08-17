@@ -16,7 +16,7 @@ const MessageCard = ({ismy,text,media,createdon,sendername,senderavatar}:Message
   return (
     <div className={`  w-full flex ${ismy && ' justify-end'}`}>
          <div className={`  max-w-[70%]  flex gap-3 ${ismy && " flex-row-reverse"}`}>
-           <div className=' min-h-[30px] min-w-[30px] h-[30px] w-[30px] relative'>
+           <div className=' max-sm:hidden min-h-[30px] min-w-[30px] h-[30px] w-[30px] relative'>
            <Avatar url={senderavatar} />
            </div>
            <div className=' flex flex-col gap-2'>

@@ -30,7 +30,7 @@ export default function RootLayout({
       {/* @ts-ignore expected an error */}
       <LeftSidebar />
       </section>
-      <section className=" bg-dark-1 w-[95%] ">
+      <section className=" max-sm:w-[100%] bg-dark-1 w-[95%] ">
       {children}
       <ActiveStatus/>
       </section>
