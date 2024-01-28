@@ -61,7 +61,7 @@ export async function get_threads(clerkid:string,skip?:any){
             path:"user",
             model:User,
             select:"username _id profilepic "
-        }).skip(skipamount).limit(5).sort({createdat:-1})
+        }).skip(skipamount).limit(15).sort({createdat:-1})
 
         if(!threads){
             return {success:false,message:"No threads found"}
