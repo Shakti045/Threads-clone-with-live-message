@@ -2,7 +2,7 @@ import ChatBar from "@/components/chat/shared/ChatBar"
 import { Toaster } from "react-hot-toast"
 export default function Conversationlayout({children}:{children:any}) {
     return (
-        <div className=" w-full h-full flex">
+        <div className=" w-full h-full  flex">
             <section className=" max-sm:hidden w-[25%] h-full bg-dark-3 border-r-[1px] border-slate-50   ">
                 <ChatBar />
             </section>
