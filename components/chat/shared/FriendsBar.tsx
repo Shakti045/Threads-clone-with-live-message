@@ -4,7 +4,7 @@ import Avatar from "../card/Avatar";
 const FriendsBar = async() => {
     const users:any=await JSON.parse(JSON.stringify(await getallusers()))
   return (
-    <div className=" text-white w-full h-full p-4">
+    <div className=" max-h-[100vh] h-[100vh] custom-scrollbar overflow-y-scroll  text-white w-full h-full p-4">
         <div>
           <h1 className=" font-bold text-[20px]">Friends</h1>
         </div>
