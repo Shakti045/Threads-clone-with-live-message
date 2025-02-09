@@ -10,7 +10,7 @@ const LeftSidebar = async () => {
   }
   const myuser=await fetchuserfromclerkid(user.id);
   return (
-      <section className="  h-full w-full ">
+      <section className="  max-h-full h-full w-full overflow-scroll ">
          <Menubar clerkid={user.id} profilepic={myuser?.profilepic} />
       </section>
   )
